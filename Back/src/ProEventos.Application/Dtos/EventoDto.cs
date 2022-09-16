@@ -21,7 +21,6 @@ namespace ProEventos.Application.Dtos
         public int QtdPessoas { get; set; }
         [RegularExpression(@".*\.(gif|jpe?g|bmp|png)$",
                             ErrorMessage ="Não é uma imagem valida.(gif, jpg,jpeg,bmp ou png)")]
-        public string Lote { get; set; }
         public string ImagemURL { get; set; }
         [Required(ErrorMessage ="O campo {0} é obrigatorio")]
         [Phone(ErrorMessage ="O campo {0} está com numero invalido")]
@@ -33,6 +32,7 @@ namespace ProEventos.Application.Dtos
         public IEnumerable<LoteDto> Lotes { get; set; }
         public IEnumerable<RedeSocialDto> RedesSociais { get; set; }
         public IEnumerable<PalestranteDto> Palestrantes { get; set; }
+        public string Lote { get; set; }
 
     
     }
